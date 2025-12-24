@@ -97,8 +97,11 @@ $sp-breakpoint: 767px; // SPとPCの切り替えブレイクポイント
         transform: translateX(100%);
         transition: transform 0.6s ease;
         overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
         /* メニューが多い場合にスクロール可能に */
-        padding-top: 80px;
+        padding-top: calc(100vw * 60 / 375);
+        padding-bottom: calc(100vw * 40 / 375);
         /* ヘッダーの高さなどを考慮して調整 */
     }
 
@@ -114,7 +117,7 @@ $sp-breakpoint: 767px; // SPとPCの切り替えブレイクポイント
     }
 
     .items {
-        text-align: center;
+        text-align: left;
         // border-bottom: 1px solid #eee;
 
         // &:first-child {
@@ -126,11 +129,40 @@ $sp-breakpoint: 767px; // SPとPCの切り替えブレイクポイント
             padding: 15px;
             margin: 10px 0 0;
         }
+
+        // サブメニューを持つ親メニュー
+        &.has-children {
+            .child_lists {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                padding-left: calc(100vw * 20 / 375);
+                border-left: 2px solid rgba(255, 255, 255, 0.3);
+
+                .child_item {
+                    margin: 0;
+
+                    .link {
+                        padding: calc(100vw * 12 / 375) calc(100vw * 16 / 375);
+                        
+                        .en {
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                        }
+
+                        .ja {
+                            font-size: 1.2rem;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .link {
         display: block;
-        padding: 15px 20px;
+        padding: calc(100vw * 16 / 375) calc(100vw * 20 / 375);
         text-decoration: none;
         color: #fff;
 

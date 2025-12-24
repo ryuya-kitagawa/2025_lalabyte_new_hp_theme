@@ -9,49 +9,432 @@
     .l-contents {
       .l-sec {
 
-        &.l-service {
-            padding: 0 0 calc(100vw * 200 / 1920);
-            padding-inline: calc(100vw * 200 / 1920);
+        // サービス目次セクション
+        &.l-service-nav {
+          margin-top: 0;
+          padding: 20px 0;
+          padding-inline: calc(100vw * 200 / 1920);
+          background: #fafafa;
+          border-bottom: 1px solid #eee;
 
-            @include g.sp {
-              padding: 0 0 calc(100vw * 50 / 375);
-              padding-inline: calc(100vw * 16 / 375);
-            }
+          @include g.sp {
+            margin-top: 0;
+            padding: 20px 0;
+            padding-inline: calc(100vw * 16 / 375);
+          }
 
-            .service_list {
-              margin: calc(100vw * 80 / 1920) 0 0;
-              display: flex;
-              justify-content: space-between;
-              align-items: flex-start;
-              gap: calc(100vw * 25 / 1920);
-              flex-wrap: wrap;
-              // background: #fff;
-              padding: calc(100vw * 30 / 1920);
-              border-radius: calc(100vw * 10 / 1920);
+          .l-service-nav__inner {
+            max-width: calc(100vw * 1200 / 1920);
+            margin: 0 auto;
+
+            .l-service-nav__lead {
+              text-align: center;
+              font-size: calc(100vw * 16 / 1920);
+              color: #666;
+              margin: 0 0 calc(100vw * 32 / 1920);
 
               @include g.sp {
-                margin: calc(100vw * 30 / 375) 0 0;
-                gap: calc(100vw * 10 / 375);
-                padding: 0;
-                border-radius: calc(100vw * 10 / 375);
+                font-size: calc(100vw * 14 / 375);
+                margin: 0 0 calc(100vw * 24 / 375);
               }
+            }
 
-              .service {
-                width: calc(50% - (25px / 2));
-                border: solid 3px #2c2c2c;
-                transition: all ease-in-out .2s;
+            .c-service-nav {
+              &__list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: calc(100vw * 40 / 1920);
+                list-style: none;
+                margin: 0;
+                padding: 0;
 
                 @include g.sp {
-                  width: 100%;
+                  flex-direction: column;
+                  gap: calc(100vw * 16 / 375);
+                  align-items: stretch;
+                }
+              }
+
+              &__item {
+                flex: 1;
+                max-width: calc(100vw * 250 / 1920);
+
+                @include g.sp {
+                  max-width: 100%;
+                }
+              }
+
+              &__link {
+                display: flex;
+                align-items: center;
+                gap: calc(100vw * 12 / 1920);
+                padding: calc(100vw * 16 / 1920) calc(100vw * 24 / 1920);
+                text-decoration: none;
+                color: #2c2c2c;
+                border-bottom: 2px solid transparent;
+                transition: border-color 0.3s ease, color 0.3s ease;
+
+                @include g.sp {
+                  padding: calc(100vw * 12 / 375) calc(100vw * 16 / 375);
+                  gap: calc(100vw * 8 / 375);
                 }
 
                 &:hover {
-                  opacity: .7;
+                  border-bottom-color: #2c2c2c;
+                  color: #2c2c2c;
+                }
+              }
+
+              &__number {
+                font-size: calc(100vw * 14 / 1920);
+                font-weight: 700;
+                color: #999;
+                font-family: "Montserrat", sans-serif;
+
+                @include g.sp {
+                  font-size: calc(100vw * 12 / 375);
+                }
+              }
+
+              &__title {
+                font-size: calc(100vw * 16 / 1920);
+                font-weight: 500;
+
+                @include g.sp {
+                  font-size: calc(100vw * 14 / 375);
                 }
               }
             }
           }
+        }
+
+        // サービス詳細セクション
+        &.c-service-section {
+          margin-top: 0;
+          padding: 20px 0;
+          padding-inline: calc(100vw * 200 / 1920);
+          border-top: 1px solid #eee;
+
+          @include g.sp {
+            margin-top: 0;
+            padding: 20px 0;
+            padding-inline: calc(100vw * 16 / 375);
+          }
+
+          &:first-of-type {
+            border-top: none;
+          }
+
+          .c-service-section__inner {
+            max-width: calc(100vw * 1200 / 1920);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+            align-items: stretch;
+
+            @include g.sp {
+              max-width: 100%;
+              grid-template-columns: 1fr;
+            }
+
+            .c-service-section__image {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              background: #f5f5f5;
+
+              @include g.sp {
+                width: 100%;
+                height: calc(100vw * 180 / 375);
+              }
+
+              picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              }
+            }
+
+            .c-service-section__content {
+              background: #fff;
+              padding: calc(100vw * 60 / 1920) calc(100vw * 80 / 1920);
+              display: flex;
+              flex-direction: column;
+              gap: calc(100vw * 24 / 1920);
+
+              @include g.sp {
+                padding: calc(100vw * 40 / 375) calc(100vw * 16 / 375);
+                gap: calc(100vw * 20 / 375);
+              }
+            }
+
+            .c-service-section__header {
+              display: flex;
+              flex-direction: column;
+              gap: calc(100vw * 12 / 1920);
+
+              @include g.sp {
+                gap: calc(100vw * 8 / 375);
+              }
+            }
+
+            .c-service-section__number {
+              font-size: calc(100vw * 12 / 1920);
+              font-weight: 700;
+              color: #999;
+              letter-spacing: 0.1em;
+              font-family: "Montserrat", sans-serif;
+
+              @include g.sp {
+                font-size: calc(100vw * 11 / 375);
+              }
+            }
+
+            .c-service-section__title {
+              margin: 0;
+              display: flex;
+              flex-direction: column;
+              gap: calc(100vw * 8 / 1920);
+
+              @include g.sp {
+                gap: calc(100vw * 6 / 375);
+              }
+
+              &-en {
+                font-size: calc(100vw * 14 / 1920);
+                font-weight: 700;
+                color: #666;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+
+                @include g.sp {
+                  font-size: calc(100vw * 12 / 375);
+                }
+              }
+
+              &-ja {
+                font-size: calc(100vw * 36 / 1920);
+                font-weight: 700;
+                color: #2c2c2c;
+                line-height: 1.4;
+
+                @include g.sp {
+                  font-size: calc(100vw * 24 / 375);
+                }
+              }
+            }
+
+            .c-service-section__description {
+              font-size: calc(100vw * 16 / 1920);
+              line-height: 1.8;
+              color: #555;
+              margin: 0;
+
+              @include g.sp {
+                font-size: calc(100vw * 14 / 375);
+                line-height: 1.7;
+              }
+            }
+
+            .c-service-section__features {
+              display: flex;
+              flex-direction: column;
+              gap: calc(100vw * 20 / 1920);
+
+              @include g.sp {
+                gap: calc(100vw * 16 / 375);
+              }
+
+              &-title {
+                font-size: calc(100vw * 18 / 1920);
+                font-weight: 700;
+                color: #2c2c2c;
+                margin: 0;
+
+                @include g.sp {
+                  font-size: calc(100vw * 16 / 375);
+                }
+              }
+
+              &-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: calc(100vw * 12 / 1920);
+
+                @include g.sp {
+                  gap: calc(100vw * 10 / 375);
+                }
+              }
+
+              &-item {
+                font-size: calc(100vw * 15 / 1920);
+                line-height: 1.7;
+                color: #555;
+                padding-left: calc(100vw * 24 / 1920);
+                position: relative;
+
+                @include g.sp {
+                  font-size: calc(100vw * 14 / 375);
+                  padding-left: calc(100vw * 20 / 375);
+                }
+
+                &::before {
+                  content: '・';
+                  position: absolute;
+                  left: 0;
+                  color: #2c2c2c;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .c-service-section__cta {
+              display: flex;
+              gap: calc(100vw * 20 / 1920);
+              margin-top: calc(100vw * 8 / 1920);
+
+              @include g.sp {
+                flex-direction: column;
+                gap: calc(100vw * 16 / 375);
+                margin-top: calc(100vw * 4 / 375);
+              }
+            }
+          }
+
+          // 画像左配置（odd）
+          &.c-service-section--image-left {
+            .c-service-section__inner {
+              grid-template-columns: 1fr 2fr;
+
+              @include g.sp {
+                grid-template-columns: 1fr;
+              }
+
+              .c-service-section__image {
+                order: 1;
+
+                @include g.sp {
+                  order: 1;
+                }
+              }
+
+              .c-service-section__content {
+                order: 2;
+
+                @include g.sp {
+                  order: 2;
+                }
+              }
+            }
+          }
+
+          // 画像右配置（even）
+          &.c-service-section--image-right {
+            .c-service-section__inner {
+              grid-template-columns: 2fr 1fr;
+
+              @include g.sp {
+                grid-template-columns: 1fr;
+              }
+
+              .c-service-section__image {
+                order: 2;
+
+                @include g.sp {
+                  order: 1;
+                }
+              }
+
+              .c-service-section__content {
+                order: 1;
+
+                @include g.sp {
+                  order: 2;
+                }
+              }
+            }
+          }
+        }
+
       }
+    }
+  }
+}
+
+// ボタンスタイル
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+
+  // プライマリボタン
+  &--primary {
+    background: #2c2c2c;
+    color: #fff;
+    font-size: calc(100vw * 16 / 1920);
+    padding: calc(100vw * 16 / 1920) calc(100vw * 40 / 1920);
+    border-radius: calc(100vw * 4 / 1920);
+
+    @include g.sp {
+      font-size: calc(100vw * 14 / 375);
+      padding: calc(100vw * 14 / 375) calc(100vw * 32 / 375);
+      border-radius: calc(100vw * 4 / 375);
+    }
+
+    &:hover {
+      background: #1a1a1a;
+    }
+  }
+
+  // セカンダリボタン
+  &--secondary {
+    background: transparent;
+    color: #2c2c2c;
+    font-size: calc(100vw * 16 / 1920);
+    padding: calc(100vw * 16 / 1920) calc(100vw * 40 / 1920);
+    border: 2px solid #2c2c2c;
+    border-radius: calc(100vw * 4 / 1920);
+
+    @include g.sp {
+      font-size: calc(100vw * 14 / 375);
+      padding: calc(100vw * 14 / 375) calc(100vw * 32 / 375);
+      border-radius: calc(100vw * 4 / 375);
+    }
+
+    &:hover {
+      background: #2c2c2c;
+      color: #fff;
+    }
+  }
+
+  // 大型ボタン
+  &--large {
+    font-size: calc(100vw * 18 / 1920);
+    padding: calc(100vw * 20 / 1920) calc(100vw * 60 / 1920);
+
+    @include g.sp {
+      font-size: calc(100vw * 16 / 375);
+      padding: calc(100vw * 18 / 375) calc(100vw * 48 / 375);
+      width: 100%;
     }
   }
 }

@@ -4,6 +4,8 @@ $column_query = new WP_Query(array(
     'post_type'      => 'column',   // コラムの投稿タイプ
     'posts_per_page' => 3,          // 3〜4件とのことなので、とりあえず4件
     'ignore_sticky_posts' => 1,
+    'orderby'        => 'modified',
+    'order'          => 'DESC',
 ));
 ?>
 
@@ -61,7 +63,7 @@ $column_query = new WP_Query(array(
 
         <div class="p-top-column__more">
             <a href="<?php echo esc_url(get_post_type_archive_link('column')); ?>" class="c-btn c-btn--more">
-                一覧を見る
+                コラム一覧を見る
             </a>
         </div>
     </section>

@@ -323,6 +323,24 @@
     },
     "hasSp": true
   },
+  "img/service_consulting.png": {
+    "src": "./img/service_consulting.png",
+    "srcset": "./img/service_consulting-sp.png 768w, ./img/service_consulting.png 1600w",
+    "webp": {
+      "src": "./webp/service_consulting.png.webp",
+      "srcset": "./webp/service_consulting-sp.png.webp 768w, ./webp/service_consulting.png.webp 1600w"
+    },
+    "hasSp": true
+  },
+  "img/service_homepage.png": {
+    "src": "./img/service_homepage.png",
+    "srcset": "./img/service_homepage-sp.png 768w, ./img/service_homepage.png 1600w",
+    "webp": {
+      "src": "./webp/service_homepage.png.webp",
+      "srcset": "./webp/service_homepage-sp.png.webp 768w, ./webp/service_homepage.png.webp 1600w"
+    },
+    "hasSp": true
+  },
   "img/service_img01.png": {
     "src": "./img/service_img01.png",
     "srcset": "./img/service_img01-sp.png 768w, ./img/service_img01.png 1600w",
@@ -332,12 +350,30 @@
     },
     "hasSp": true
   },
+  "img/service_marketing.png": {
+    "src": "./img/service_marketing.png",
+    "srcset": "./img/service_marketing-sp.png 768w, ./img/service_marketing.png 1600w",
+    "webp": {
+      "src": "./webp/service_marketing.png.webp",
+      "srcset": "./webp/service_marketing-sp.png.webp 768w, ./webp/service_marketing.png.webp 1600w"
+    },
+    "hasSp": true
+  },
   "img/service_mv.png": {
     "src": "./img/service_mv.png",
     "srcset": "./img/service_mv-sp.png 768w, ./img/service_mv.png 1920w",
     "webp": {
       "src": "./webp/service_mv.png.webp",
       "srcset": "./webp/service_mv-sp.png.webp 768w, ./webp/service_mv.png.webp 1920w"
+    },
+    "hasSp": true
+  },
+  "img/service_teaching.png": {
+    "src": "./img/service_teaching.png",
+    "srcset": "./img/service_teaching-sp.png 768w, ./img/service_teaching.png 1600w",
+    "webp": {
+      "src": "./webp/service_teaching.png.webp",
+      "srcset": "./webp/service_teaching-sp.png.webp 768w, ./webp/service_teaching.png.webp 1600w"
     },
     "hasSp": true
   },

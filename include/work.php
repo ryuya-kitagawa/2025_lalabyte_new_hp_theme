@@ -61,7 +61,7 @@ $column_query = new WP_Query(array(
 
         <div class="p-top-column__more">
             <a href="<?php echo esc_url(get_post_type_archive_link('work')); ?>" class="c-btn c-btn--more">
-                一覧を見る
+                制作実績一覧を見る
             </a>
         </div>
     </section>

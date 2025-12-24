@@ -9,6 +9,20 @@
   </picture>
 </div> -->
 <footer class="l-footer p-footer" data-footer>
+  <!-- 相談誘導ブロック -->
+  <section class="l-footer-cta">
+    <div class="l-footer-cta__inner">
+      <h2 class="l-footer-cta__title">迷ったら無料相談</h2>
+      <p class="l-footer-cta__description">どのサービスがご自身の課題に最適か、まずはお気軽にご相談ください。一緒に最適な解決策を考えます。</p>
+      <div class="l-footer-cta__buttons">
+        <a href="/contact/" class="c-btn c-btn--large c-btn--primary">
+          <i class="fa-solid fa-envelope"></i>
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+  </section>
+
   <div class="inner">
     <div class="logo">
       <picture>
