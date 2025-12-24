@@ -1,0 +1,139 @@
+@use "../global" as g;
+
+/* ======================================================================
+ TOC+ (Table of Contents Plus)
+====================================================================== */
+
+#toc_container {
+  margin: calc(100vw * 40 / 1920) 0;
+  padding: calc(100vw * 30 / 1920) calc(100vw * 30 / 1920);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  @include g.sp {
+    margin: calc(100vw * 24 / 375) 0;
+    padding: calc(100vw * 20 / 375) calc(100vw * 16 / 375);
+  }
+
+  // タイトル
+  .toc_title {
+    font-size: calc(100vw * 20 / 1920);
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0 0 calc(100vw * 20 / 1920);
+    padding: 0 0 calc(100vw * 8 / 1920);
+    border-bottom: 2px solid #2c2c2c;
+
+    @include g.sp {
+      font-size: calc(100vw * 18 / 375);
+      margin: 0 0 calc(100vw * 16 / 375);
+      padding: 0 0 calc(100vw * 6 / 375);
+    }
+  }
+
+  // リスト
+  .toc_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      & + li {
+        margin-top: calc(100vw * 10 / 1920);
+
+        @include g.sp {
+          margin-top: calc(100vw * 8 / 375);
+        }
+      }
+    }
+
+    // リンク
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #2c2c2c;
+      font-size: calc(100vw * 16 / 1920);
+      line-height: 1.7;
+      transition: color 0.2s ease;
+
+      @include g.sp {
+        font-size: calc(100vw * 14 / 375);
+        line-height: 1.6;
+      }
+
+      &:hover {
+        color: #555;
+        text-decoration: underline;
+      }
+    }
+
+    // 番号
+    .toc_number {
+      display: inline-block;
+      font-weight: 600;
+      color: #2c2c2c;
+      margin-right: calc(100vw * 8 / 1920);
+      min-width: calc(100vw * 24 / 1920);
+      text-align: right;
+
+      @include g.sp {
+        margin-right: calc(100vw * 6 / 375);
+        min-width: calc(100vw * 20 / 375);
+      }
+    }
+
+    // ネストされたリスト（サブ項目がある場合）
+    ul {
+      list-style: none;
+      margin: calc(100vw * 8 / 1920) 0 0;
+      padding-left: calc(100vw * 30 / 1920);
+
+      @include g.sp {
+        margin: calc(100vw * 6 / 375) 0 0;
+        padding-left: calc(100vw * 20 / 375);
+      }
+
+      li {
+        margin-top: calc(100vw * 8 / 1920);
+
+        @include g.sp {
+          margin-top: calc(100vw * 6 / 375);
+        }
+      }
+
+      a {
+        font-size: calc(100vw * 15 / 1920);
+
+        @include g.sp {
+          font-size: calc(100vw * 13 / 375);
+        }
+      }
+
+      .toc_number {
+        font-size: calc(100vw * 15 / 1920);
+
+        @include g.sp {
+          font-size: calc(100vw * 13 / 375);
+        }
+      }
+    }
+  }
+
+  // バリエーション：白背景（既にデフォルト）
+  &.toc_white {
+    background: #fff;
+  }
+
+  // バリエーション：箇条書きなし（既にデフォルト）
+  &.no_bullets {
+    .toc_list {
+      list-style: none;
+    }
+  }
+}
+

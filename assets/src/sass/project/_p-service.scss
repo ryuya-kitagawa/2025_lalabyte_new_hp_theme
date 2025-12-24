@@ -1,0 +1,57 @@
+@use "../global" as g;
+
+// ======================================================================
+// p-service
+// ======================================================================
+
+.p-service {
+  .l-main {
+    .l-contents {
+      .l-sec {
+
+        &.l-service {
+            padding: 0 0 calc(100vw * 200 / 1920);
+            padding-inline: calc(100vw * 200 / 1920);
+
+            @include g.sp {
+              padding: 0 0 calc(100vw * 50 / 375);
+              padding-inline: calc(100vw * 16 / 375);
+            }
+
+            .service_list {
+              margin: calc(100vw * 80 / 1920) 0 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              gap: calc(100vw * 25 / 1920);
+              flex-wrap: wrap;
+              // background: #fff;
+              padding: calc(100vw * 30 / 1920);
+              border-radius: calc(100vw * 10 / 1920);
+
+              @include g.sp {
+                margin: calc(100vw * 30 / 375) 0 0;
+                gap: calc(100vw * 10 / 375);
+                padding: 0;
+                border-radius: calc(100vw * 10 / 375);
+              }
+
+              .service {
+                width: calc(50% - (25px / 2));
+                border: solid 3px #2c2c2c;
+                transition: all ease-in-out .2s;
+
+                @include g.sp {
+                  width: 100%;
+                }
+
+                &:hover {
+                  opacity: .7;
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}

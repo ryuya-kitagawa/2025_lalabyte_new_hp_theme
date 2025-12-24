@@ -1,0 +1,60 @@
+@use "../global" as g;
+
+/* ======================================================================
+ FAQ アコーディオン
+====================================================================== */
+
+.c-faq {
+  margin-top: 40px;
+}
+
+.c-faq__item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.c-faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: #253237;
+  cursor: pointer;
+  padding-right: 30px;
+  position: relative;
+}
+
+.c-faq__question:after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.c-faq__question.is-open:after {
+  transform: rotate(45deg);
+}
+
+.c-faq__answer {
+  display: none;
+  padding-top: 12px;
+  // アニメーション用のtransition（JSで高さを制御する際に使用）
+  transition: height 0.25s ease;
+  overflow: hidden;
+}
+
+.c-faq__answer--animating {
+  // アニメーション中はoverflowを制御
+  overflow: hidden;
+}
+
+.c-faq__answer p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+

@@ -1,0 +1,41 @@
+@use "../global" as g;
+
+// ----------------------------------------------------------------
+// SNS Share & Recommend
+// ----------------------------------------------------------------
+.c-sns-share {
+    margin-top: 40px;
+
+    &__list {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        a {
+            display: block;
+            padding: 10px 20px;
+            background: #eee;
+            text-decoration: none;
+            color: #333;
+            border-radius: 4px;
+        }
+
+        &.--x a {
+            background: #000;
+            color: #fff;
+        }
+
+        &.--fb a {
+            background: #3b5998;
+            color: #fff;
+        }
+
+        &.--line a {
+            background: #06c755;
+            color: #fff;
+        }
+    }
+}

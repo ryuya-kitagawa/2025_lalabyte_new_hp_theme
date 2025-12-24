@@ -1,0 +1,23 @@
+@use "../global" as g;
+
+.c-recommend {
+    margin: calc(100vw * 60 / 1920) 0 0;
+    padding: calc(100vw * 40 / 1920) 0;
+
+    &__title {
+        font-size: calc(100vw * 22 / 1920);
+        font-weight: 600;
+        text-align: left;
+        margin: 0 0 calc(100vw * 30 / 1920);
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: calc(100vw * 60 / 1920);
+            height: calc(100vw * 3 / 1920);
+            margin-top: calc(100vw * 8 / 1920);
+            background: #333; // アクセントカラーはお好みで
+        }
+    }
+}

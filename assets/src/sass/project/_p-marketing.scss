@@ -1,0 +1,679 @@
+@use "../global" as g;
+
+// ======================================================================
+// p-marketing
+// ======================================================================
+
+.p-marketing {
+  .l-main {
+    .l-contents {
+      .l-sec {
+
+        &.l-opt {
+          padding-inline: 0;
+
+          .c_seo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: calc(100vw * 100 / 1920) 0 0;
+
+            @include g.sp {
+              flex-wrap: wrap;
+              margin: calc(100vw * 30 / 375) 0 0;
+            }
+
+            .left {
+              margin: 0 0 0 calc(100vw * 200 / 1920);
+
+              @include g.sp {
+                width: 100%;
+                margin: 0;
+              }
+
+              .b_ttl {
+                font-size: calc(100vw * 48 / 1920);
+                font-weight: 900;
+
+                @include g.sp {
+                  display: block;
+                  width: 100%;
+                  font-size: calc(100vw * 21 / 375);
+                  line-height: calc(100vw * 32 / 375);
+                  padding: calc(100vw * 15 / 375) 0;
+                  text-align: center;
+                  margin: 0 auto;
+                  background: #2c2c2c;
+                  color: #fff;
+                }
+              }
+
+              .ttl_txt {
+                font-size: calc(100vw * 20 / 1920);
+                font-weight: 500;
+                margin: calc(100vw * 15 / 1920) 0 0;
+
+                @include g.sp {
+                  font-size: calc(100vw * 14 / 375);
+                  text-align: center;
+                  margin: calc(100vw * 15 / 375) 0 0;
+                }
+              }
+            }
+
+            .right {
+              width: calc(100vw * 1086 / 1920);
+              height: auto;
+
+              @include g.sp {
+                width: 100%;
+                margin: calc(100vw * 20 / 375) 0 0;
+              }
+
+              picture {
+
+                source,
+                img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+
+          .c_seo_list {
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: calc(100vw * 30 / 1920);
+            margin: calc(100vw * 100 / 1920) 0 0;
+            padding-inline: calc(100vw * 200 / 1920);
+
+            @include g.sp {
+              gap: calc(100vw * 10 / 375);
+              margin: calc(100vw * 30 / 375) 0 0;
+              padding-inline: calc(100vw * 16 / 375);
+            }
+
+            .items {
+              width: calc((100% / 3) - calc(100vw * 30 / 1920));
+              height: auto;
+              text-align: center;
+              background: #fff;
+              height: calc(100vw * 300 / 1920);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              padding: calc(100vw * 20 / 1920);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+              border: solid 3px #2c2c2c;
+              transition: all ease-in-out .3s;
+
+              @include g.sp {
+                width: 100%;
+                height: auto;
+                padding: calc(100vw * 15 / 375);
+              }
+
+              &:hover {
+                border: solid 3px #D94A4A;
+              }
+
+              .seo_list_ttl {
+                font-size: calc(100vw * 24 / 1920);
+                font-weight: 900;
+
+                @include g.sp {
+                  font-size: calc(100vw * 18 / 375);
+                }
+              }
+
+              .seo_list_txt {
+                font-size: calc(100vw * 16 / 1920);
+                font-weight: 500;
+                margin: calc(100vw * 20 / 1920) 0 0;
+                line-height: calc(100vw * 39 / 1920);
+
+                @include g.sp {
+                  font-size: calc(100vw * 14 / 375);
+                  margin: calc(100vw * 10 / 375) 0 0;
+                  line-height: calc(100vw * 21 / 375);
+                }
+              }
+            }
+          }
+
+          .c_meo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: calc(100vw * 200 / 1920) 0 0;
+
+            @include g.sp {
+              flex-direction: column-reverse;
+              margin: calc(100vw * 50 / 375) 0 0;
+            }
+
+            .left {
+              width: calc(100vw * 1086 / 1920);
+              height: auto;
+
+              @include g.sp {
+                width: 100%;
+                margin: calc(100vw * 20 / 375) 0 0;
+              }
+
+              picture {
+
+                source,
+                img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+
+            .right {
+              margin: 0 calc(100vw * 200 / 1920) 0 0;
+
+              @include g.sp {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+              }
+
+              .b_ttl {
+                font-size: calc(100vw * 48 / 1920);
+                font-weight: 900;
+
+                @include g.sp {
+                  font-size: calc(100vw * 18 / 375);
+                  text-align: center;
+                  line-height: calc(100vw * 32 / 375);
+                  padding: calc(100vw * 15 / 375) 0;
+                  text-align: center;
+                  margin: 0 auto;
+                  background: #2c2c2c;
+                  color: #fff;
+                }
+              }
+
+              .ttl_txt {
+                font-size: calc(100vw * 20 / 1920);
+                font-weight: 500;
+                margin: calc(100vw * 15 / 1920) 0 0;
+
+                @include g.sp {
+                  font-size: calc(100vw * 14 / 375);
+                  text-align: center;
+                  margin: calc(100vw * 15 / 375) 0 0;
+                }
+              }
+            }
+          }
+
+          .c_meo_list {
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: calc(100vw * 30 / 1920);
+            margin: calc(100vw * 100 / 1920) 0 0;
+            padding-inline: calc(100vw * 200 / 1920);
+
+            @include g.sp {
+              gap: calc(100vw * 10 / 375);
+              margin: calc(100vw * 30 / 375) 0 0;
+              padding-inline: calc(100vw * 16 / 375);
+            }
+
+            .items {
+              width: calc((100% / 3) - calc(100vw * 30 / 1920));
+              height: auto;
+              text-align: center;
+              background: #fff;
+              height: calc(100vw * 300 / 1920);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              padding: calc(100vw * 20 / 1920);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+              border: solid 3px #2c2c2c;
+              transition: all ease-in-out .3s;
+
+              @include g.sp {
+                width: 100%;
+                height: auto;
+                padding: calc(100vw * 15 / 375);
+              }
+
+              &:hover {
+                border: solid 3px #D94A4A;
+              }
+
+              .meo_list_ttl {
+                font-size: calc(100vw * 24 / 1920);
+                font-weight: 900;
+
+                @include g.sp {
+                  font-size: calc(100vw * 18 / 375);
+                }
+              }
+
+              .meo_list_txt {
+                font-size: calc(100vw * 16 / 1920);
+                font-weight: 500;
+                margin: calc(100vw * 20 / 1920) 0 0;
+                line-height: calc(100vw * 39 / 1920);
+
+                @include g.sp {
+                  font-size: calc(100vw * 14 / 375);
+                  margin: calc(100vw * 10 / 375) 0 0;
+                  line-height: calc(100vw * 21 / 375);
+                }
+              }
+            }
+          }
+        }
+
+        &.l-flow {
+          .flow_list {
+            width: 60%;
+            margin: calc(100vw * 100 / 1920) auto;
+
+            @include g.sp {
+              width: 100%;
+              margin: calc(100vw * 50 / 1920) auto;
+            }
+
+            .items {
+              display: flex;
+              justify-content: left;
+              align-items: center;
+              gap: calc(100vw * 80 / 1920);
+              margin: calc(100vw * 50 / 1920) 0 0;
+
+              @include g.sp {
+                gap: calc(100vw * 30 / 375);
+                margin: calc(100vw * 20 / 375) 0 0;
+              }
+
+              .number {
+                position: relative;
+                width: calc(100vw * 100 / 1920);
+                height: auto;
+
+                @include g.sp {
+                  width: calc(100vw * 50 / 375);
+                }
+
+                picture {
+
+                  source,
+                  img {
+                    display: block;
+                    width: calc(100vw * 100 / 1920);
+                    height: auto;
+
+                    @include g.sp {
+                      width: calc(100vw * 50 / 375);
+                    }
+                  }
+                }
+
+                .number_txt {
+                  position: absolute;
+                  top: 58%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  color: #fff;
+                  font-size: calc(100vw * 40 / 1920);
+                  font-weight: 900;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 21 / 375);
+                  }
+                }
+              }
+
+              .flow_right {
+                .flow_ttl {
+                  font-size: calc(100vw * 32 / 1920);
+                  font-weight: 700;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 18 / 375);
+                  }
+                }
+
+                .flow_txt {
+                  font-size: calc(100vw * 20 / 1920);
+                  font-weight: 400;
+                  margin: calc(100vw * 10 / 1920) 0 0;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 16 / 375);
+                    margin: calc(100vw * 10 / 375) 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.l-plan {
+          padding: 0 0 calc(100vw * 200 / 1920);
+          padding-inline: calc(100vw * 200 / 1920);
+
+          @include g.sp {
+            padding: 0 0 calc(100vw * 50 / 375);
+            padding-inline: calc(100vw * 16 / 375);
+          }
+
+          .desc {
+            font-size: calc(100vw * 20 / 1920);
+            margin: calc(100vw * 20 / 1920) 0 0;
+            letter-spacing: 1.72px;
+
+            @include g.sp {
+              font-size: calc(100vw * 16 / 375);
+              margin: calc(100vw * 20 / 375) 0 0;
+            }
+          }
+
+          .plan_wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .plan_box {
+              border: solid calc(100vw * 3 / 1920) #2c2c2c;
+              border-radius: calc(100vw * 10 / 1920);
+              background: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: calc(100vw * 50 / 1920) 0 0;
+              padding: calc(100vw * 30 / 1920);
+
+              @include g.sp {
+                flex-wrap: wrap;
+                border: solid calc(100vw * 3 / 375) #2c2c2c;
+                border-radius: calc(100vw * 10 / 375);
+                margin: calc(100vw * 20 / 375) 0 0;
+                padding: calc(100vw * 15 / 375);
+              }
+
+              &._pop {
+                border: solid calc(100vw * 3 / 1920) #D94A4A;
+                position: relative;
+
+                @include g.sp {
+                  border: solid calc(100vw * 3 / 375) #D94A4A;
+                }
+
+                &::before {
+                  content: "おすすめ";
+                  font-weight: 900;
+                  width: calc(100vw * 80 / 1920);
+                  height: calc(100vw * 40 / 1920);
+                  font-size: calc(100vw * 14 / 1920);
+                  color: #fff;
+                  background: #D94A4A;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  top: calc(100vw * 15 / 1920);
+                  left: calc(100vw * 15 / 1920);
+
+                  @include g.sp {
+                    width: calc(100vw * 80 / 375);
+                    height: calc(100vw * 40 / 375);
+                    font-size: calc(100vw * 14 / 375);
+                  }
+                }
+              }
+
+              .left {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                @include g.sp {
+                  width: 100%;
+                }
+
+                .plan_tag {
+                  width: calc(100vw * 200 / 1920);
+                  height: calc(100vw * 45 / 1920);
+                  font-size: calc(100vw * 18 / 1920);
+                  font-weight: 900;
+                  color: #fff;
+                  background: #2c2c2c;
+                  border-radius: calc(100vw * 28 / 1920);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  @include g.sp {
+                    width: calc(100vw * 150 / 375);
+                    height: calc(100vw * 30 / 375);
+                    font-size: calc(100vw * 14 / 375);
+                    border-radius: calc(100vw * 28 / 375);
+                  }
+                }
+
+                .plan_ttl {
+                  font-size: calc(100vw * 32 / 1920);
+                  font-weight: 900;
+                  margin: calc(100vw * 20 / 1920) 0 0;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 24 / 375);
+                    margin: calc(100vw * 20 / 375) 0 0;
+                  }
+                }
+
+                .plan_price {
+                  font-size: calc(100vw * 32 / 1920);
+                  font-weight: 500;
+                  margin: calc(100vw * 20 / 1920) 0 0;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 16 / 375);
+                    margin: calc(100vw * 20 / 375) 0 0;
+                  }
+
+                  ._b {
+                    font-size: calc(100vw * 64 / 1920);
+                    font-weight: 900;
+
+                    @include g.sp {
+                      font-size: calc(100vw * 32 / 375);
+                    }
+                  }
+                }
+
+                .plan_bot_txt {
+                  font-size: calc(100vw * 18 / 1920);
+                  font-weight: 500;
+                  color: #7D7D7D;
+                  text-align: center;
+                  margin: calc(100vw * 20 / 1920) 0 0;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 14 / 375);
+                    margin: calc(100vw * 10 / 375) 0 0;
+                  }
+                }
+              }
+
+              .right {
+                width: 50%;
+
+                @include g.sp {
+                  width: 100%;
+                  margin: calc(100vw * 20 / 375) 0 0;
+                }
+
+                .info_ttl {
+                  font-size: calc(100vw * 21 / 1920);
+                  font-weight: 900;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 18 / 375);
+                    text-align: center;
+                  }
+                }
+
+                .info_ttl_txt {
+                  font-size: calc(100vw * 18 / 1920);
+                  font-weight: 400;
+                  margin: calc(100vw * 10 / 1920) 0 0;
+                  letter-spacing: 1.68px;
+                  line-height: 1.72;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 14 / 375);
+                    margin: calc(100vw * 10 / 375) 0 0;
+                  }
+                }
+
+                .info_list {
+                  margin: calc(100vw * 30 / 1920) 0 0;
+
+                  @include g.sp {
+                    margin: calc(100vw * 20 / 375) 0 0;
+                  }
+
+                  .info_items {
+                    margin: calc(100vw * 15 / 1920) 0 0;
+
+                    @include g.sp {
+                      margin: calc(100vw * 15 / 375) 0 0;
+                    }
+
+                    .info_items_ttl {
+                      font-size: calc(100vw * 21 / 1920);
+                      font-weight: 700;
+
+                      @include g.sp {
+                        font-size: calc(100vw * 16 / 375);
+                      }
+                    }
+
+                    .info_items_txt {
+                      font-size: calc(100vw * 16 / 1920);
+                      font-weight: 400;
+                      margin: calc(100vw * 10 / 1920) 0 0;
+                      letter-spacing: 1.68px;
+                      line-height: 1.72;
+
+                      @include g.sp {
+                        font-size: calc(100vw * 14 / 375);
+                        margin: calc(100vw * 10 / 375) 0 0;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &._full {
+                width: 100%;
+              }
+
+              &._single {
+                width: calc(50% - 10px);
+                padding: calc(100vw * 30 / 1920);
+                display: block;
+
+                @include g.sp {
+                  width: 100%;
+                }
+
+                .plan_tag {
+                  width: calc(100vw * 200 / 1920);
+                  height: calc(100vw * 45 / 1920);
+                  font-size: calc(100vw * 18 / 1920);
+                  font-weight: 900;
+                  color: #fff;
+                  background: #2c2c2c;
+                  border-radius: calc(100vw * 28 / 1920);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 auto;
+
+                  @include g.sp {
+                    width: calc(100vw * 150 / 375);
+                    height: calc(100vw * 30 / 375);
+                    font-size: calc(100vw * 14 / 375);
+                    border-radius: calc(100vw * 28 / 375);
+                  }
+                }
+
+                .plan_ttl {
+                  font-size: calc(100vw * 32 / 1920);
+                  font-weight: 900;
+                  margin: calc(100vw * 20 / 1920) 0 0;
+                  text-align: center;
+
+                  @include g.sp {
+                    font-size: calc(100vw * 24 / 375);
+                    margin: calc(100vw * 20 / 375) 0 0;
+                  }
+                }
+
+                .f_box {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: calc(100vw * 40 / 1920) 0 0;
+
+                  @include g.sp {
+                    margin: calc(100vw * 20 / 375) 0 0;
+                  }
+                }
+
+                .plan_price {
+                  font-size: calc(100vw * 24 / 1920);
+                  font-weight: 500;
+                  margin: calc(100vw * 30 / 1920) 0 0;
+                  text-align: center;
+
+                  ._b {
+                    font-size: calc(100vw * 64 / 1920);
+                    font-weight: 900;
+                  }
+                }
+
+                .plan_bot_ttl {
+                  font-size: calc(100vw * 18 / 1920);
+                  font-weight: 900;
+                  margin: calc(100vw * 20 / 1920) 0 0;
+                  text-align: center;
+                }
+
+                .plan_bot_txt {
+                  font-size: calc(100vw * 16 / 1920);
+                  font-weight: 400;
+                  color: #7D7D7D;
+                  text-align: center;
+                  margin: calc(100vw * 30 / 1920) 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
